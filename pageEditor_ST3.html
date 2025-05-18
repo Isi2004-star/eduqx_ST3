@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="css/page-editor.css" >
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" >
+    <title>
+      Isiri Jayaneththi (Student 3) - Editor's page | Quality Education
+    </title>
+  </head>
+  <body>
+    <!-- Sticky Navbar -->
+    <header>
+      <nav>
+        <a href="splash.html">
+          <img
+            src="assets/images/logo.png"
+            alt="Quality Education Logo"
+            class="logo"
+          >
+        </a>
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="profile.html">User Profile</a></li>
+          <li><a href="table.html">Table</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content of the Page -->
+    <main>
+      <section
+        id="editor-hero-section"
+        class="section-wrapper"
+        style="
+          background: url(assets/images/page-editor-hero.jpg);
+          background-size: 100% 200%;
+          background-position-y: -150px;
+          background-repeat: no-repeat;
+        "
+      >
+        <div class="editor-hero">
+          <div class="content">
+            <h1>Isiri Jayaneththi - Editor&apos;s page</h1>
+            <p style="color: whitesmoke">
+              <b>UoW Number:</b> w2120048 &ThickSpace; &ThickSpace;
+              <b>IIT Student ID:</b> 20240577 &ThickSpace; &ThickSpace;
+              <b>Role:</b> Student 3
+            </p>
+          </div>
+          <div class="editor-image-container">
+            <img src="assets/team/isiri.jpeg" alt="Isiri Jayaneththi Pfp" >
+          </div>
+        </div>
+      </section>
+      <div class="section-wrapper">
+        <article class="editor-body">
+          <div class="editor-content">
+            <div class="editor-content-section">
+              <h2 id="responsible-pages">Responsible Pages</h2>
+              <ul>
+                <li>Feedback Page</li>
+                <li>Team Page</li>
+                <li>Content Page &lpar;Bridging the Digital Divide&rpar;</li>
+                <li>Student 3 Page Editor (The page you're on)</li>
+                <li>Student 3 Validations Page</li>
+              </ul>
+            </div>
+
+            <div class="editor-content-section">
+              <!-- Feedback Page -->
+              <h2 id="feedback-page">
+                Technical and Accesibility Description of the Feedback Page
+              </h2>
+              <p>
+                The Feedback Page is designed using semantic HTML and CSS
+                styling to provide a structured, accessible, and visually
+                appealing user experience. It ensures responsive design,
+                keyboard navigation, and screen reader compatibility while
+                maintaining a clean and professional layout.
+              </p>
+               
+
+               <!--links to relavant pages-->
+              <a href="feedback.html" target="_blank" class="btn"
+                  >Visit Feedback Page
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" /></svg
+                ></a>
+                <a
+                  href="validation_ST3.html#feedbackpage"
+                  target="_blank"
+                  class="btn"
+                  >Check out the validations for Feedback Page
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" /></svg
+                >
+              </a>
+
+              <h3 id="feedback-html">1. HTML Techniques Used</h3>
+              <ul>
+                <li>
+                  <b>Structure & Layout</b>
+                  <p>
+                    The page is structured using semantic elements such as
+                    <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+                    <code>&lt;section&gt;</code>, <code>&lt;fieldset&gt;</code>,
+                    and <code>&lt;footer&gt;</code>, ensuring logical content
+                    organization and better accessibility. The
+                    <code>&lt;form&gt;</code> element is divided into sections
+                    using <code>&lt;fieldset&gt;</code> and
+                    <code>&lt;legend&gt;</code>, making it easier for screen
+                    readers to navigate. A
+                    <code>&lt;div class="container"&gt;</code> is used to group
+                    content and maintain a consistent layout.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Navigation & Form Elements</b>
+                  <p>
+                    The navigation bar includes a structured
+                    <code>&lt; ul &gt;</code> list for better usability and
+                    accessibility. The feedback form contains different input
+                    fields, including text inputs, email validation, radio
+                    buttons, checkboxes, drop-downs, and textareas, each serving
+                    a specific function. The file upload field allows users to
+                    attach documents, enhancing the form's .
+                  </p>
+                </li>
+
+                <li>
+                  <b>Accessibility & User Interaction</b>
+                  <p>
+                    Error messages and required field validation ensure proper
+                    data entry. A word count feature helps users manage input
+                    length, while a "Back to Top" button improves navigation.
+                    The form includes success messages to confirm submission.
+                  </p>
+                </li>
+              </ul>
+
+              <h3 id="feedback-css">2. CSS Techniques Used</h3>
+              <ul>
+                <li>
+                  <b>Layout & Positioning</b>
+                  <p>
+                    The page layout is managed using CSS Grid and Flexbox,
+                    ensuring dynamic alignment of elements. The
+                    <code>.container</code> class centers content, and the
+                    <code>.section-wrapper.feedback</code>
+                    section organizes the form structure.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Form Styling & User Interaction</b>
+                  <p>
+                    The form fields, including <code>&lt;input&gt;</code>,
+                    <code>&lt;textarea&gt;</code>, and
+                    <code>&lt;select&gt;</code>, have consistent padding,
+                    borders, and hover effects to enhance usability. Fieldsets
+                    and legends are styled for improved visibility. The file
+                    upload button has a custom appearance for better aesthetics.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Validation & Feedback Styling</b>
+                  <p>
+                    Error messages are styled in red for visibility, and focus
+                    effects are implemented for keyboard users. The star rating
+                    system includes hover effects for dynamic interaction.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Responsive Design & Accessibility</b>
+                  <p>
+                    The page adapts to mobile screens using media queries,
+                    ensuring proper display across different devices. Keyboard
+                    navigation is supported with <code>:focus</code> styles, and
+                    high-contrast colors are used for readability. ARIA live
+                    regions are implemented to ensure error messages are read
+                    aloud by screen readers.
+                  </p>
+                </li>
+              </ul>
+
+              <h3 id="feedback-accessibility">3. Accessibility Features</h3>
+              <ul>
+                <li>
+                  <b>Semantic HTML & Screen Reader Compatibility</b>
+                  <p>
+                    The page uses well-structured headings and form labels,
+                    ensuring proper interpretation by assistive technologies.
+                    Error messages and validation alerts are dynamically updated
+                    for screen readers.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Keyboard Navigation & Color Contrast</b>
+                  <p>
+                    All interactive elements are keyboard-accessible, and
+                    hover/focus effects improve navigation. The form follows
+                    WCAG contrast guidelines to assist visually impaired users.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Mobile Accessibility</b>
+                  <p>
+                    The layout automatically adjusts for different screen sizes,
+                    maintaining usability across devices. Touch-friendly
+                    elements ensure a smooth experience for mobile users.
+                  </p>
+                </li>
+              </ul>
+
+              <!-- Team Page -->
+              <h2 id="team-page">
+                Technical and Accesibility Description of the Team Page
+              </h2>
+              <p>
+                The "Meet Our Team" page is structured using HTML and CSS to
+                present team members in an interactive, accessible,and visually
+                appealing format. It includes hover effects, responsive design,
+                and screen reader compatibility to enhance user experience.
+              </p>
+              
+              <!--links to the relevant pages-->
+              <a href="team.html" target="_blank" class="btn"
+                  >Visit Team Page
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" /></svg
+                ></a>
+                <a
+                  href="validation_ST3.html#teampage"
+                  target="_blank"
+                  class="btn"
+                  >Check out the validations for Team Page
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" /></svg
+                ></a>
+
+              <h3 id="team-html">1. HTML Techniques Used</h3>
+              <ul>
+                <li>
+                  <b>Structure & Layout</b>
+                  <p>
+                    The page follows semantic HTML with elements like
+                    <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+                    <code>&lt;section&gt;</code>, <code>&lt;div&gt;</code>, and
+                    <code>&lt;footer&gt;</code> to ensure clear content
+                    organization. The team members are wrapped inside
+                    <code>&lt;div class="team-container"&gt;</code>, ensuring a
+                    structured layout.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Navigation & Content Display</b>
+                  <p>
+                    The navigation bar includes a structured
+                    <code>&lt;ul&gt;</code> list for better usability. Each team
+                    member card (<code>&lt;div class="team-member"&gt;</code>)
+                    contains:
+                  </p>
+                </li>
+                <li>
+                  Profile picture (<code>&lt;img&gt;</code>) with an
+                  <code>alt</code> attribute for accessibility.
+                </li>
+                <li>
+                  Name (<code>&lt;h3&gt;</code>) for proper heading structure.
+                </li>
+                <li>
+                  Expandable details (<code
+                    >&lt;div class="member-info"&gt;</code
+                  >) that display on hover or keyboard focus.
+                </li>
+              </ul>
+
+              <h3 id="team-css">2. CSS Techniques Used</h3>
+              <ul>
+                <li>
+                  <b>Layout & Positioning</b>
+                  <p>
+                    The <code>.team-container</code> uses Flexbox to ensure
+                    dynamic alignment and responsiveness. Each team member card
+                    is styled to maintain consistent spacing and visibility.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Card & Hover Effects</b>
+                  <p>
+                    Each <code>.team-member</code> has a hover effect (<code
+                      >transform: scale(1.05);</code
+                    >) to provide an interactive feel. Images fade slightly
+                    (<code>opacity: 0.6</code>) on hover, improving readability.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Expandable Information Section</b>
+                  <p>
+                    The <code>.member-info</code> section is initially hidden
+                    (<code>height: 0</code>) and appears when the user hovers or
+                    focuses on a team member card. This improves screen reader
+                    compatibility and keyboard navigation.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Color & Readability</b>
+                  <p>
+                    The design uses high-contrast colors for text readability.
+                    Hover and focus styles improve interaction feedback,
+                    ensuring compliance with WCAG accessibility standards.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Responsive Design & Accessibility</b>
+                  <p>
+                    The page adapts to different screen sizes using CSS media
+                    queries, ensuring proper alignment and readability on mobile
+                    devices. Keyboard users can access team member details using
+                    <code>tabindex="0"</code>, and screen readers can interpret
+                    elements effectively.
+                  </p>
+                </li>
+              </ul>
+
+              <h3 id="team-accessibility">3. Accessibility Features</h3>
+              <ul>
+                <li>
+                  <b>Semantic HTML & Screen Reader Compatibility</b>
+                  <p>
+                    The page uses semantic headings and structured content to
+                    enhance navigation.
+                    <code>alt</code> attributes on images ensure visually
+                    impaired users can understand the content.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Keyboard Navigation & Focus Management</b>
+                  <p>
+                    Interactive elements are keyboard-accessible, and focus
+                    styles highlight important sections. The expandable details
+                    (<code>.member-info</code>) appear when the user focuses on
+                    a team member card.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Mobile Accessibility & Responsiveness</b>
+                  <p>
+                    The layout adjusts for mobile devices, with flexible content
+                    positioning and touch-friendly interactions.
+                  </p>
+                </li>
+              </ul>
+
+              <!-- Content Page-->
+              <h2 id="content-page">
+                Technical and Accesibility Description of the Content
+                Page:Bridging the Digital Divide
+              </h2>
+              
+              
+              <p>
+                The "Bridging the Digital Divide" content page is structured
+                using semantic HTML and CSS styling to create an engaging,
+                informative, and accessible reading experience. The page is
+                designed with a clear layout, interactive elements, and
+                responsive features to enhance usability across different
+                devices.
+              </p>
+
+              <!--links to the relevant pages-->
+              <a href="content_ST3.html" target="_blank" class="btn"
+                  >Visit Content Page
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" /></svg
+                ></a>
+                <a
+                  href="validation_ST3.html#content_ST3page"
+                  target="_blank"
+                  class="btn"
+                  >Check out the validations for Content Page
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" /></svg
+                ></a>
+
+              <h3 id="content-html">1. HTML Techniques Used</h3>
+              <ul>
+                <li>
+                  <b>Structure & Layout</b>
+                  <p>
+                    The page is structured using semantic elements such as
+                    <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+                    <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>,
+                    <code>&lt;aside&gt;</code>, and <code>&lt;footer&gt;</code>,
+                    ensuring a logical flow of content. The main article content
+                    is wrapped inside <code>&lt;article&gt;</code>, while a
+                    sticky Table of Contents (<code
+                      >&lt;aside class="toc"&gt;</code
+                    >) improves navigation.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Navigation & Interactive Features</b>
+                  <p>
+                    The navigation bar includes a structured
+                    <code>&lt;ul&gt;</code> list, making it accessible for
+                    keyboard navigation and screen readers. The Table of
+                    Contents (<code>&lt;aside class="toc"&gt;</code>) provides
+                    quick navigation to different sections of the article. The
+                    "Back to Top" button (<code
+                      >&lt;button id="to-top-btn"&gt;</code
+                    >) allows users to quickly return to the top of the page.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Content Organization & Readability</b>
+                  <p>
+                    The content is divided into sections (<code
+                      >&lt;div class="article-content-section"&gt;</code
+                    >) with meaningful headings (<code>&lt;h2&gt;</code>,
+                    <code>&lt;h3&gt;</code>) to improve readability. Images
+                    (<code>&lt;img&gt;</code>) are accompanied by captions
+                    (<code>&lt;p class="caption"&gt;</code>), enhancing content
+                    understanding. The article includes lists (<code
+                      >&lt;ul&gt;</code
+                    >
+                    and <code>&lt;li&gt;</code>) to break down key information
+                    into digestible parts.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Accessibility Enhancements</b>
+                  <p>
+                    Each image includes an <code>alt</code> attribute, ensuring
+                    accessibility for visually impaired users. Anchor links
+                    within the Table of Contents (<code
+                      >&lt;a href="#section-id"&gt;</code
+                    >) allow easy navigation. The article headings have
+                    <code>scroll-margin-top</code> properties to prevent content
+                    from being obscured by the fixed navbar.
+                  </p>
+                </li>
+              </ul>
+
+              <h3 id="content-css">2. CSS Techniques Used</h3>
+              <ul>
+                <li>
+                  <b>Layout & Positioning</b>
+                  <p>
+                    The <code>.article-body</code> uses CSS Flexbox to structure
+                    the article and Table of Contents side by side, ensuring a
+                    well-balanced layout. The Table of Contents is set as
+                    <code>position: sticky;</code> to remain visible while
+                    scrolling.
+                  </p>
+                </li>
+                <li>
+                  <b>Typography & Readability</b>
+                  <p>
+                    Text is styled with consistent font sizes, colors, and
+                    spacing to enhance readability. The
+                    <code>.meta-info</code> section is styled with a muted color
+                    (<code>var(--color-text-muted)</code>) to keep supporting
+                    details less prominent. Headings and subheadings are spaced
+                    properly for visual clarity.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Table of Contents Styling</b>
+                  <p>
+                    The Table of Contents (<code>.toc-wrapper</code>) is styled
+                    with a border and height limit to maintain structure. Nested
+                    lists have left borders and spacing to create a clear
+                    hierarchy. Hover effects change the color of links,
+                    improving usability.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Image Styling</b>
+                  <p>
+                    Images are given rounded corners (<code
+                      >border-radius: 20px</code
+                    >) for a modern appearance. Captions are styled to
+                    center-align text (<code>text-align: center;</code>) to
+                    maintain readability.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Interactive Elements & Hover Effects</b>
+                  <p>
+                    Interactive elements such as Table of Contents links, hover
+                    effects, and the "Back to Top" button have smooth
+                    transitions for enhanced user experience. The button scales
+                    slightly when hovered, creating a subtle animation effect.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Responsive Design & Mobile Optimization</b>
+                  <p>
+                    The page adapts to different screen sizes using CSS media
+                    queries, ensuring content remains accessible on all devices.
+                    The Table of Contents moves below the article on smaller
+                    screens, improving layout usability.
+                  </p>
+                </li>
+              </ul>
+
+              <h3 id="content-accessibility">3. Accessibility Features</h3>
+              <ul>
+                <li>
+                  <b>Semantic HTML & Screen Reader Compatibility</b>
+                  <p>
+                    The page is structured with well-defined headings, labels,
+                    and lists, ensuring screen readers can interpret the content
+                    properly.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Keyboard Navigation & Focus Management</b>
+                  <p>
+                    All interactive elements, including the Table of Contents,
+                    buttons, and links, are keyboard-accessible, with hover and
+                    focus styles to guide users.
+                  </p>
+                </li>
+
+                <li>
+                  <b>Color Contrast & Readability</b>
+                  <p>
+                    The text follows WCAG contrast guidelines, ensuring
+                    readability for users with visual impairments.
+                  </p>
+                </li>
+                <li>
+                  <b>Mobile Accessibility & Adaptability</b>
+                  <p>
+                    The layout automatically adjusts for different screen sizes,
+                    providing a seamless experience for mobile users.
+                  </p>
+                </li>
+              </ul>
+
+              <!-- Challenges and Lessons Learned -->
+              <h2 id="challenges">
+                Comprehensive Challenges & Lessons Learned
+              </h2>
+              <p>
+                The development of the
+                <strong>Team, Content, and Feedback Pages</strong> presented
+                various design, functionality, and accessibility challenges.
+                Through responsive design, JavaScript validation, accessibility
+                improvements, and performance optimizations, these challenges
+                were successfully addressed.
+              </p>
+
+              <h3 id="responsive-design">1. Responsive Design Issues</h3>
+              <h4>Challenges:</h4>
+              <ul>
+                <li><p>Profile cards misalignment on smaller screens.</p></li>
+                <li>
+                  <p>TOC overlapping with content in the content page.</p>
+                </li>
+                <li><p>Grid layout issues in the feedback form.</p></li>
+              </ul>
+
+              <h4>Solutions:</h4>
+              <ul>
+                <li><p>Implemented Flexbox & Grid for better alignment.</p></li>
+                <li>
+                  <p>
+                    Adjusted TOC with sticky positioning & width constraints.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Updated feedback form layout for improved responsiveness.
+                  </p>
+                </li>
+              </ul>
+
+              <h4>Lessons Learned:</h4>
+              <ul>
+                <li><p>Testing across devices is essential.</p></li>
+                <li>
+                  <p>
+                    Using flexible layouts (flex-wrap, gap) prevents content
+                    breakage.
+                  </p>
+                </li>
+              </ul>
+
+              <h3 id="form-validation">2. JavaScript Form Validation Issues</h3>
+              <h4>Challenges:</h4>
+              <ul>
+                <li><p>Email validation errors due to incorrect regex.</p></li>
+                <li>
+                  <p>Word count limit failure in textareas on pasted input.</p>
+                </li>
+                <li><p>"Other" improvement field visibility issues.</p></li>
+              </ul>
+
+              <h4>Solutions:</h4>
+              <ul>
+                <li><p>Fixed regex for email validation.</p></li>
+                <li><p>Dynamically enforced word count limits.</p></li>
+                <li>
+                  <p>Enabled real-time field toggling for the "Other" input.</p>
+                </li>
+              </ul>
+
+              <h4>Lessons Learned:</h4>
+              <ul>
+                <li><p>Validation should be real-time.</p></li>
+                <li>
+                  <p>
+                    Consider manual input & copy-pasting in validation logic.
+                  </p>
+                </li>
+              </ul>
+
+              <h3 id="navigation-issues">
+                3. Sticky Navigation & Scrolling Issues
+              </h3>
+              <h4>Challenges:</h4>
+              <ul>
+                <li>
+                  <p>
+                    TOC links scrolling content under navbar, making it
+                    unreadable.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Smooth scrolling disrupting browser validation tooltips.
+                  </p>
+                </li>
+              </ul>
+
+              <h4>Solutions:</h4>
+              <ul>
+                <li><p>Added scroll-margin to headings.</p></li>
+                <li><p>Disabled smooth scrolling on form pages.</p></li>
+              </ul>
+
+              <h4>Lessons Learned:</h4>
+              <ul>
+                <li>
+                  <p>
+                    Sticky headers affect anchor links and require adjustments.
+                  </p>
+                </li>
+                <li>
+                  <p>Default browser behavior is sometimes preferable.</p>
+                </li>
+              </ul>
+
+              <h3 id="accessibility-issues">4. Accessibility Issues</h3>
+              <h4>Challenges:</h4>
+              <ul>
+                <li>
+                  <p>
+                    Team member cards & star rating system were not
+                    keyboard-accessible.
+                  </p>
+                </li>
+                <li><p>Missing ARIA label for "Back to Top" button.</p></li>
+              </ul>
+
+              <h4>Solutions:</h4>
+              <ul>
+                <li><p>Added tabindex="0" for keyboard navigation.</p></li>
+                <li>
+                  <p>
+                    Applied ARIA attributes for better screen reader support.
+                  </p>
+                </li>
+              </ul>
+
+              <h4>Lessons Learned:</h4>
+              <ul>
+                <li><p>Keyboard navigation must always be tested.</p></li>
+                <li>
+                  <p>
+                    ARIA attributes improve accessibility without design impact.
+                  </p>
+                </li>
+              </ul>
+
+              <h3 id="performance-issues">5. Image Loading & Performance</h3>
+              <h4>Challenges:</h4>
+              <ul>
+                <li><p>Large image files slowed page loading.</p></li>
+              </ul>
+
+              <h4>Solutions:</h4>
+              <ul>
+                <li><p>Used WebP format for better compression.</p></li>
+                <li>
+                  <p>Enabled lazy loading for performance improvement.</p>
+                </li>
+              </ul>
+
+              <h4>Lessons Learned:</h4>
+              <ul>
+                <li><p>Optimized images enhance page speed.</p></li>
+                <li>
+                  <p>Lazy loading prevents unnecessary resource usage.</p>
+                </li>
+              </ul>
+
+              <h3 id="file-upload">6. File Upload Handling</h3>
+              <h4>Challenges:</h4>
+              <ul>
+                <li><p>Users could not see the uploaded file name.</p></li>
+              </ul>
+
+              <h4>Solutions:</h4>
+              <ul>
+                <li><p>Displayed file name dynamically on upload.</p></li>
+              </ul>
+
+              <h4>Lessons Learned:</h4>
+              <ul>
+                <li><p>Even small UI updates improve user experience.</p></li>
+              </ul>
+
+              <h3 id="form-submission">
+                7. Form Submission & Success Message Issues
+              </h3>
+              <h4>Challenges:</h4>
+              <ul>
+                <li><p>Submit button remained enabled despite errors.</p></li>
+                <li>
+                  <p>Users lacked immediate feedback after submission.</p>
+                </li>
+                <li>
+                  <p>Success message was not accessible to screen readers.</p>
+                </li>
+              </ul>
+
+              <h4>Solutions:</h4>
+              <ul>
+                <li><p>Disabled submit button when the form is invalid.</p></li>
+                <li><p>Displayed success message dynamically.</p></li>
+                <li><p>Implemented ARIA attributes for accessibility.</p></li>
+              </ul>
+
+              <h4>Lessons Learned:</h4>
+              <ul>
+                <li>
+                  <p>Forms should provide instant validation feedback.</p>
+                </li>
+                <li><p>Real-time content updates improve usability.</p></li>
+                <li>
+                  <p>ARIA attributes ensure screen reader compatibility.</p>
+                </li>
+              </ul>
+
+              <!-- Compliance -->
+              <h2 id="compliance">
+                Compliance with JANET Regulations Governing Web Page Publication
+              </h2>
+              <ol>
+                <li>
+                  <b>Accessibility Compliance (WCAG 2.1 & JANET Standards):</b>
+                  The pages align with WCAG 2.1 and JANET accessibility
+                  policies, ensuring usability for all users, including those
+                  with disabilities.
+                  <ul>
+                    <li>
+                      <b>Measures Implemented</b>
+                      Semantic HTML, keyboard navigability, focus management,
+                      and sufficient color contrast.
+                    </li>
+                    <li>
+                      <b>Outcome</b>
+                      Improves screen reader compatibility, enhances keyboard
+                      navigation, and ensures real-time feedback accessibility.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b
+                    >Security & Data Protection Compliance (JANET & GDPR
+                    Standards)</b
+                  >
+                  All data collection and form handling comply with JANET and
+                  GDPR to protect user privacy and security.
+                  <ul>
+                    <li>
+                      <b>Measures Implemented</b>
+                      Email validation, form input restrictions, and client-side
+                      data validation.
+                    </li>
+                    <li>
+                      <b>Outcome</b>
+                      Prevents malicious submissions, ensures data integrity,
+                      and enhances security.
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <b>Ethical Data Collection & User Privacy Compliance</b>
+                  The feedback form follows JANET’s ethical guidelines,
+                  collecting only necessary and relevant user data.
+                  <ul>
+                    <li>
+                      <b>Measures Implemented</b>
+                      Minimal data collection, no storage of sensitive
+                      information, and transparency in data handling.
+                    </li>
+
+                    <li>
+                      <b>Outcome</b>
+                      Ensures ethical and compliant data collection while
+                      protecting user privacy.
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <b
+                    >Web Content Standards & Appropriate Use Policy
+                    Compliance</b
+                  >
+                  Web content adheres to JANET’s guidelines, ensuring accuracy,
+                  relevance, and compliance with institutional policies.
+                  <ul>
+                    <li>
+                      <b>Measures Implemented</b>
+                      Content remains educational, non-offensive, and aligned
+                      with academic publishing standards.
+                    </li>
+
+                    <li>
+                      <b>Outcome</b>
+                      Prevents misleading, unlawful, or inappropriate content.
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <b>Usability & Responsive Design Compliance</b>
+                  Pages are designed for optimal usability and responsiveness,
+                  complying with JANET’s design standards.
+                  <ul>
+                    <li>
+                      <b>Measures Implemented</b>
+                      Mobile-first design, flexible layouts, and dynamic
+                      text-image scaling.
+                    </li>
+                    <li>
+                      <b>Outcome</b>
+                      Ensures accessibility and usability across desktops,
+                      tablets, and mobile devices.
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <b
+                    >Compliance with Web Hosting & IT Infrastructure
+                    Standards</b
+                  >
+                  JANET regulations mandate secure hosting and modern web
+                  technologies for reliability and efficiency.
+                  <ul>
+                    <li>
+                      <b>Measures Implemented</b>
+                      Use of HTML5, CSS3, JavaScript, secure scripting, and
+                      optimized assets for performance.
+                    </li>
+                    <li>
+                      <b>Outcome</b>
+                      Enhances security, prevents vulnerabilities, and improves
+                      loading times.
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <b>Form Submission & User Interaction Compliance</b>
+                  Web forms comply with JANET’s best practices, ensuring a
+                  seamless and user-friendly experience.
+                  <ul>
+                    <li>
+                      <b>Measures Implemented</b>
+                      Real-time validation, success messages, and prevention of
+                      auto-submission.
+                    </li>
+                    <li>
+                      <b>Outcome</b>
+                      Enhances user interaction, ensures validation feedback,
+                      and maintains compliance.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+            
+            <!--References-->
+            <div class="editor-content-section">
+              <h2 id="references">References</h2>
+              <ul>
+                <li>
+                  Freepik. (n.d.). Isometric composition with conceptual
+                  images of opened book, computer windows, and small people characters. 
+                  Freepik. Available at: https://www.freepik.com (Accessed: 9 March 2025).
+                </li>
+                <li>
+                  Freepik. (n.d.). Rear view of a young college student
+                  paying attention and listening to her online teacher on the 
+                  laptop at home. Freepik. Available at: https://www.freepik.com (Accessed: 9 March 2025).
+                </li>
+                <li>
+                  Freepik. (n.d.). Young adult studying literature in library
+                   stack generated by AI. Freepik. Available at: https://www.freepik.com (Accessed: 9 March 2025).
+                </li>
+                <li>
+                  Course work. (2025). Title of the file. Available at: 
+                  https://drive.google.com/file/d/1cWgfnHMc0Tfvtx8FwGlD1wFqxtubU5Wr/view?usp=drive_link (Accessed: 9 March 2025).
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="toc-wrapper">
+            <aside class="toc">
+              <span> <a href="#responsible-pages">Responsible pages</a></span>
+
+              <ul>
+                <li>
+                  <a href="#feedback-page"
+                    >Technical and Accesibility Description of the Feedback
+                    Page</a
+                  >
+                  <ul>
+                    <li>
+                      <a href="#feedback-html">1. HTML Techniques Used</a>
+                    </li>
+                    <li><a href="#feedback-css">2. CSS Techniques Used</a></li>
+                    <li>
+                      <a href="#feedback-accessibility"
+                        >3. Accessibility Features</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#team-page"
+                    >Technical and Accesibility Description of the Team Page</a
+                  >
+                  <ul>
+                    <li><a href="#team-html">1. HTML Techniques Used</a></li>
+                    <li><a href="#team-css">2. CSS Techniques Used</a></li>
+                    <li>
+                      <a href="#team-accessibility"
+                        >3. Accessibility Features</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#content-page"
+                    >Technical and Accesibility Description of the Content Page:
+                    Bridging the Digital Divide</a
+                  >
+                  <ul>
+                    <li><a href="#content-html">1. HTML Techniques Used</a></li>
+                    <li><a href="#content-css">2. CSS Techniques Used</a></li>
+                    <li>
+                      <a href="#content-accessibility"
+                        >3. Accessibility Features</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#challenges"
+                    >Comprehensive Challenges & Lessons Learned</a
+                  >
+                  <ul>
+                    <li>
+                      <a href="#responsive-design"
+                        >1. Responsive Design Issues</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#form-validation"
+                        >2. JavaScript Form Validation Issues</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#navigation-issues"
+                        >3. Sticky Navigation & Scrolling Issues</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#accessibility-issues"
+                        >4. Accessibility Issues</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#performance-issues"
+                        >5. Image Loading & Performance</a
+                      >
+                    </li>
+                    <li><a href="#file-upload">6. File Upload Handling</a></li>
+                    <li>
+                      <a href="#form-submission"
+                        >7. Form Submission & Success Message Issues</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#compliance"
+                    >Compliance with JANET Regulations Governing Web Page
+                    Publication</a
+                  >
+                </li>
+                <li>
+                  <a href="#references">References</a>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </article>
+      </div>
+
+      <!-- Back to top button -->
+      <button id="to-top-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#fff9f9"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-arrow-up"
+        >
+          <path d="m5 12 7-7 7 7" />
+          <path d="M12 19V5" />
+        </svg>
+      </button>
+    </main>
+
+    <!-- Footer of the Page -->
+    <footer>
+      <div>
+        <img
+          src="assets/images/logo.png"
+          alt="Quality Education Logo"
+          class="logo"
+        >
+        <p>Empowering Minds, Changing Lives</p>
+        <small class="page-editor"
+          >Page edited by
+          <a class="link" href="pageEditor_ST4.html"
+            >Isiri Jayaneththi (Student 3)</a
+          ></small
+        >
+      </div>
+      <div class="footer-links-container">
+        <div class="footer-links-group">
+          <span>Quick Links</span>
+          <a href="volunteer.html">Volunteer</a>
+          <a href="feedback.html">Feedback</a>
+          <a href="team.html">Team</a>
+          <a href="profile.html">User Profile</a>
+          <a href="table.html">Table</a>
+          <a href="sitemap.html">Sitemap</a>
+        </div>
+        <div class="footer-links-group">
+          <span>Site Editors</span>
+          <a href="pageEditor_ST1.html">Dulina Senadeera</a>
+          <a href="pageEditor_ST2.html">Ammaar Aslam</a>
+          <a href="pageEditor_ST3.html">Isiri Jayaneththi</a>
+          <a href="pageEditor_ST4.html">Senodh Anavaratne</a>
+        </div>
+        <div class="footer-links-group">
+          <span>Validations</span>
+          <a href="validation_ST1.html">Student 1</a>
+          <a href="validation_ST2.html">Student 2</a>
+          <a href="validation_ST3.html">Student 3</a>
+          <a href="validation_ST4.html">Student 4</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Additional Scripts -->
+    <script src="script.js"></script>
+    <script src="toc-script.js"></script>
+  </body>
+</html>

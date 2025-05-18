@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+    <!-- Page Title & Favicon -->
+    <title>Feedback Form - Quality Education</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" >
+
+    <!-- Stylesheet Links -->
+    <link rel="stylesheet" href="css/feedback.css" >
+    <link rel="stylesheet" href="style.css" >
+  </head>
+
+  <body>
+    <!-- ========== HEADER SECTION ========== -->
+    <header>
+      <nav>
+        <a href="splash.html">
+          <img
+            src="assets/images/logo.png"
+            alt="Quality Education Logo"
+            class="logo"
+          >
+        </a>
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="profile.html">User Profile</a></li>
+          <li><a href="table.html">Table</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <section class="section-wrapper feedback">
+      <h1>Quality Education Feedback Form</h1>
+      <p class="required-fields">Required fields *</p>
+
+      <!-- Feedback Form -->
+      <form id="feedback-form">
+        <!-- Personal Details Section -->
+        <fieldset class="form-section">
+          <legend>Personal Details</legend>
+
+          <!-- Name Input -->
+          <div class="input-container">
+            <label for="full-name">* Enter your name:</label>
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              maxlength="50"
+              required
+            >
+          </div>
+
+          <!-- Phone Number Input -->
+          <div class="input-container">
+            <label for="phone-number">* Enter your phone number:</label>
+            <input
+              type="tel"
+              id="phone-number"
+              name="phone-number"
+              pattern="\+?[0-9\s\-]{7,15}"
+              title="Enter a valid phone number"
+              required
+            >
+          </div>
+
+          <!-- Email Input with Validation -->
+          <div class="input-container">
+            <label for="email">* Enter your email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              title="Please enter a valid email (e.g., name@example.com)"
+              oninput="validateEmail()"
+            >
+            <p
+              id="email-error"
+              class="validation-message"
+              style="display: none"
+            >
+              The email format should be <strong>'name@example.com'</strong>
+            </p>
+          </div>
+
+          <!-- Country Selection -->
+          <div class="input-container">
+            <label for="country">* Select your country:</label>
+            <input list="countries" id="country" name="country" required >
+            <datalist id="countries">
+              <option value="Sri Lanka"></option>
+              <option value="United States"></option>
+              <option value="Canada"></option>
+              <option value="United Kingdom"></option>
+              <option value="Australia"></option>
+              <option value="India"></option>
+            </datalist>
+          </div>
+        </fieldset>
+
+        <!-- Feedback Section -->
+        <fieldset class="form-section">
+          <legend>Feedback on Education</legend>
+
+          <!-- Accessibility Question -->
+          <div class="input-container col-span-2">
+            <p>
+              1. Is quality education accessible to everyone in your community?
+            </p>
+            <div class="radio-group">
+              <input
+                type="radio"
+                id="education-yes"
+                name="accessibility"
+                value="yes"
+              >
+              <label for="education-yes">Yes</label>
+              <input
+                type="radio"
+                id="education-no"
+                name="accessibility"
+                value="no"
+              >
+              <label for="education-no">No</label>
+            </div>
+          </div>
+
+          <!-- Inclusivity Question -->
+          <div class="input-container col-span-2">
+            <p>
+              2. Do you think the education provided is inclusive and caters to
+              diverse needs?
+            </p>
+            <div class="radio-group">
+              <input
+                type="radio"
+                id="inclusive-yes"
+                name="inclusivity"
+                value="yes"
+              >
+              <label for="inclusive-yes">Yes</label>
+              <input
+                type="radio"
+                id="inclusive-no"
+                name="inclusivity"
+                value="no"
+              >
+              <label for="inclusive-no">No</label>
+            </div>
+          </div>
+
+          <!-- Conditional Textarea (Shown when No is selected) -->
+          <div class="input-container col-span-2">
+            <div id="improvements-container" style="display: none">
+              <p>3. If "No", how can inclusivity in education be improved?</p>
+              <textarea
+                id="improvements"
+                name="improvements"
+                rows="4"
+                oninput="updateWordCount('improvements', 'improvements-count')"
+                class="textarea"
+              ></textarea>
+              <p class="word-count" id="improvements-count">Total words: 0</p>
+              <p class="warning" id="improvements-warning">
+                Word limit exceeded! Max 300 words allowed.
+              </p>
+            </div>
+          </div>
+
+          <!-- STAR RATING SYSTEM -->
+          <div class="input-container col-span-2">
+            <p>
+              4. How satisfied are you with the quality of education in your
+              region?
+            </p>
+
+            <div class="star-rating">
+              <input type="radio" id="star5" name="rating" value="5" ><label
+                for="star5"
+                >&#9733;</label
+              >
+              <input type="radio" id="star4" name="rating" value="4" ><label
+                for="star4"
+                >&#9733;</label
+              >
+              <input type="radio" id="star3" name="rating" value="3" ><label
+                for="star3"
+                >&#9733;</label
+              >
+              <input type="radio" id="star2" name="rating" value="2" ><label
+                for="star2"
+                >&#9733;</label
+              >
+              <input type="radio" id="star1" name="rating" value="1" ><label
+                for="star1"
+                >&#9733;</label
+              >
+            </div>
+          </div>
+
+          <!-- IMPROVEMENT AREAS CHECKBOXES -->
+          <div class="input-container col-span-2">
+            <p>5. Which areas of education need more improvement?</p>
+            <div class="checkbox-group" style="display: flex; gap: 15px">
+              <input
+                type="checkbox"
+                id="accessibility"
+                name="improvement"
+                value="Accessibility"
+              >
+              <label for="accessibility">Accessibility</label>
+
+              <input
+                type="checkbox"
+                id="inclusivity"
+                name="improvement"
+                value="Inclusivity"
+              >
+              <label for="inclusivity">Inclusivity</label>
+
+              <input
+                type="checkbox"
+                id="teacher-training"
+                name="improvement"
+                value="Teacher Training"
+              >
+              <label for="teacher-training">Teacher Training</label>
+
+              <input
+                type="checkbox"
+                id="technology"
+                name="improvement"
+                value="Technology Integration"
+              >
+              <label for="technology">Technology Integration</label>
+
+              <input
+                type="checkbox"
+                id="other-one"
+                name="improvement"
+                value="Other"
+                onclick="toggleOtherTextArea()"
+              >
+              <label for="other-one">Other</label>
+            </div>
+          </div>
+
+          <!-- Hidden text area for 'Other' checkbox -->
+          <div class="input-container col-span-2">
+            <div id="other-area" class="other-area">
+              <label for="other-improvement">Please specify:</label>
+              <textarea
+                id="other-improvement"
+                name="other-improvement"
+                rows="1"
+                class="textarea"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="input-container col-span-2">
+            <p>
+              6. Would you like to receive updates about initiatives improving
+              education quality?
+            </p>
+            <select id="updates" name="updates">
+              <option value="yes">Yes via e-mail</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <!-- EMAIL UPDATES SELECTION -->
+          <div class="input-container col-span-2">
+            <p>
+              7. Do you have additional suggestions or comments to improve
+              education quality?
+            </p>
+            <!-- COMMENTS SECTION WITH WORD COUNTER -->
+            <textarea
+              id="comments"
+              name="comments"
+              rows="4"
+              oninput="updateWordCount('comments', 'comments-count')"
+              class="textarea"
+            ></textarea>
+            <p class="word-count" id="comments-count">Total words: 0</p>
+            <p class="warning" id="comments-warning">
+              Word limit exceeded! Max 300 words allowed.
+            </p>
+          </div>
+
+          <!-- FILE UPLOAD COMPONENT -->
+          <div class="input-container col-span-2">
+            <p>8. Upload a file (e.g., screenshot or document):</p>
+            <label class="btn primary-inverted" for="file-upload"
+              >Choose a file</label
+            >
+            <input
+              type="file"
+              id="file-upload"
+              class="file-upload"
+              onchange="displayFileName()"
+            >
+            <p class="file-name" id="file-name"></p>
+          </div>
+
+          <!-- DATE PICKER -->
+          <div class="input-container col-span-2">
+            <p>9. Choose a date for feedback submission:</p>
+            <input type="date" id="feedback-date" name="feedback-date" >
+          </div>
+          <button
+            style="text-align: center; justify-content: center"
+            class="btn primary col-span-2"
+            type="submit"
+          >
+            Submit Feedback
+          </button>
+        </fieldset>
+      </form>
+      <!--Success message-->
+      <div id="success-message">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="80"
+          height="80"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2Zm4.78 7.7-5.67 5.67a.75.75 0 0 1-1.06 0l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.76 0 1.06Z"
+            fill="#3ab795"
+          ></path>
+        </svg>
+        Thank you for your feedback! Your response has been submitted
+        successfully.
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div>
+        <img
+          src="assets/images/logo.png"
+          alt="Quality Education Logo"
+          class="logo"
+        >
+        <p>Empowering Minds, Changing Lives</p>
+        <small class="page-editor"
+          >Page edited by
+          <a class="link" href="pageEditor_ST3.html"
+            >Isiri Jayaneththi (Student 3)</a
+          ></small
+        >
+      </div>
+      <div class="footer-links-container">
+        <div class="footer-links-group">
+          <span>Quick Links</span>
+          <a href="volunteer.html">Volunteer</a>
+          <a href="feedback.html">Feedback</a>
+          <a href="team.html">Team</a>
+          <a href="profile.html">User Profile</a>
+          <a href="table.html">Table</a>
+          <a href="sitemap.html">Sitemap</a>
+        </div>
+        <div class="footer-links-group">
+          <span>Site Editors</span>
+          <a href="pageEditor_ST1.html">Dulina Senadeera</a>
+          <a href="pageEditor_ST2.html">Ammaar Aslam</a>
+          <a href="pageEditor_ST3.html">Isiri Jayaneththi</a>
+          <a href="pageEditor_ST4.html">Senodh Anavaratne</a>
+        </div>
+        <div class="footer-links-group">
+          <span>Validations</span>
+          <a href="validation_ST1.html">Student 1</a>
+          <a href="validation_ST2.html">Student 2</a>
+          <a href="validation_ST3.html">Student 3</a>
+          <a href="validation_ST4.html">Student 4</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Additional Scripts -->
+    <!-- Common Global Script -->
+    <script src="script.js"></script>
+
+    <!-- Feedback Page Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const inclusiveNo = document.getElementById("inclusive-no");
+        const inclusiveYes = document.getElementById("inclusive-yes");
+        const improvementsContainer = document.getElementById(
+          "improvements-container"
+        );
+
+        // Toggle Improvements visibility based on selection
+        function toggleImprovements() {
+          if (inclusiveNo.checked) {
+            improvementsContainer.style.display = "block";
+          } else {
+            improvementsContainer.style.display = "none";
+          }
+        }
+
+        // Add event listeners for 'inclusive' options
+        inclusiveNo.addEventListener("change", toggleImprovements);
+        inclusiveYes.addEventListener("change", toggleImprovements);
+
+        /// Initial check in case the form reloads with "No" already selected
+        toggleImprovements();
+      });
+
+      // Update word count and handle word limit
+      function updateWordCount(textareaId, countId) {
+        let text = document.getElementById(textareaId).value.trim();
+        let words = text.split(/\s+/).filter((word) => word.length > 0);
+        let wordCount = words.length;
+
+        document.getElementById(
+          countId
+        ).textContent = `Total words: ${wordCount}`;
+
+        const warningId = textareaId + "-warning";
+        const warningElement = document.getElementById(warningId);
+
+        if (wordCount > 300) {
+          const trimmedText = words.slice(0, 300).join(" "); // Keep only the first 300 words
+          document.getElementById(textareaId).value = trimmedText; // Update the textarea value
+          warningElement.textContent = "Word limit reached!"; // Set warning message
+          warningElement.style.display = "block"; // Show the warning
+          document.querySelector('button[type="submit"]').disabled = true; // Disable submit button
+        } else {
+          document.getElementById(warningId).style.display = "none"; // Hide warning if under the word limit
+          document.querySelector('button[type="submit"]').disabled = false; // Enable submit button
+        }
+      }
+
+      // Function to toggle the 'Other' text area when the checkbox is selected
+      function toggleOtherTextArea() {
+        const otherCheckbox = document.getElementById("other-one");
+        const otherTextArea = document.getElementById("other-area");
+
+        if (otherCheckbox.checked) {
+          otherTextArea.style.display = "block";
+        } else {
+          otherTextArea.style.display = "none";
+        }
+      }
+
+      // Function to validate email format
+      function validateEmail() {
+        const emailInput = document.getElementById("email");
+        const emailError = document.getElementById("email-error");
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,}$/;
+        const emailValue = emailInput.value;
+
+        if (!emailPattern.test(emailValue)) {
+          emailError.style.display = "block";
+        } else {
+          emailError.style.display = "none";
+        }
+      }
+
+      // Display chosen file name
+      function displayFileName() {
+        const fileInput = document.getElementById("file-upload");
+        const fileNameDisplay = document.getElementById("file-name");
+        const fileName = fileInput.files[0]
+          ? fileInput.files[0].name
+          : "No file chosen";
+        fileNameDisplay.textContent = fileName;
+      }
+
+      //Success Message
+      document
+        .getElementById("feedback-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent actual form submission
+          // Hide the form and show the success message
+          document.getElementById("feedback-form").style.display = "none";
+          document.getElementById("success-message").style.display = "flex";
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,438 @@
+/* Import a custom google font */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* Some variables used throughout the styling sheet to maintain consistency */
+:root {
+  --color-primary: #ef233c;
+  --color-primary-dark: #d11026;
+  --color-background: #fff9f9;
+  --color-text: #0a0a0a;
+  --color-text-muted: #5c5c5c;
+  --color-border: #d4d4d8;
+  --page-horizontal-spacing: 96px;
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    --page-horizontal-spacing: 64px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --page-horizontal-spacing: 20px;
+  }
+}
+
+/* Apply general styles to all elements */
+* {
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* General Styling for body and contet */
+body {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Styling for the header (sticky navbar) and its content */
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  padding: 24px var(--page-horizontal-spacing);
+  background-color: var(--color-background);
+  transition: all 0.2s;
+}
+header.scrolled {
+  box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 220px;
+}
+
+nav .nav-links {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  gap: 28px;
+}
+
+nav .nav-links li {
+  list-style-type: none;
+}
+nav .nav-links li a {
+  color: var(--color-text-muted);
+  transition: all 0.3s;
+  font-size: 16px;
+}
+nav .nav-links li a:hover {
+  color: var(--color-text);
+}
+nav .nav-links li a.active {
+  color: var(--color-primary);
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 14px;
+  cursor: pointer;
+}
+.bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text-muted);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  nav .nav-links {
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-background);
+    align-items: center;
+    padding: 80px 0 40px;
+    gap: 20px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    border-bottom: 1px solid var(--color-border);
+    z-index: -1; /* Lower z-index than logo and hamburger */
+  }
+
+  nav.active .nav-links {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  nav.active .hamburger-menu .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  nav.active .hamburger-menu .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  nav.active .hamburger-menu .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    --page-horizontal-spacing: 16px;
+  }
+
+  .logo {
+    width: 160px;
+  }
+}
+
+/* Main Content Wrapper - For all the content that lie within it */
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* A section wrapper to apply spacing for seperate different section in the page (used for the <section> tag) */
+.section-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 108px var(--page-horizontal-spacing);
+  min-height: 85vh;
+}
+
+@media (max-width: 1024px) {
+  .section-wrapper {
+    padding: 80px var(--page-horizontal-spacing);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-wrapper {
+    min-height: 50vh;
+    padding: 56px var(--page-horizontal-spacing);
+  }
+}
+
+/* Removing the default styles for <a> tags */
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+footer {
+  width: 100%;
+  padding: 40px var(--page-horizontal-spacing);
+  border-top: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  font-size: 16px;
+}
+footer .page-editor {
+  color: var(--color-text-muted);
+}
+
+.footer-links-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.footer-links-group {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  gap: 10px;
+}
+.footer-links-group span {
+  font-weight: 600;
+}
+
+.footer-links-group a {
+  color: var(--color-text-muted);
+  width: fit-content;
+}
+.footer-links-group a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links-container {
+    margin-top: 38px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    text-align: left;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-links-container {
+    margin-top: 38px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    text-align: left;
+    gap: 28px;
+  }
+}
+
+/* Changing the selection color */
+::selection {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Customizing the scrollbar of the entire website */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+img {
+  width: 100%;
+}
+
+/* Text Styles */
+h1 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 14px 0px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 12px 0px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 6px 0px;
+}
+p {
+  color: var(--color-text-muted);
+  margin: 4px 0;
+}
+
+code {
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  padding: 3px 5px;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  body {
+    font-size: 18px;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ec5f5f 0%, #ef233c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Buttons */
+.btn,
+button {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+}
+
+.btn.lg {
+  border-radius: 14px;
+  font-size: 18px;
+  padding: 14px 36px;
+}
+
+@media (max-width: 480px) {
+  .btn,
+  button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .btn.lg {
+    font-size: 16px;
+    padding: 12px 28px;
+  }
+}
+
+.btn.primary {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.btn.primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn.ghost {
+  color: var(--color-text-muted);
+}
+
+.btn.ghost:hover {
+  color: var(--color-text);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.primary-inverted {
+  color: var(--color-primary);
+  background-color: var(--color-background);
+}
+
+.btn.primary-inverted:hover {
+  background-color: whitesmoke;
+}
+
+.btn.ghost-inverted {
+  color: var(--color-background);
+}
+
+.btn.ghost-inverted:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.link {
+  color: var(--color-text);
+}
+.link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* To top button (used only in some pages) */
+#to-top-btn {
+  position: fixed;
+  bottom: 5%;
+  right: 1%;
+  background-color: var(--color-primary);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 0;
+}
+
+#to-top-btn:hover {
+  background-color: var(--color-primary-dark);
+}
